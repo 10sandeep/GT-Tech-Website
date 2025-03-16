@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">TechCo</h3>
+            <h3 className="text-xl font-bold mb-4">GT Tech</h3>
             <p className="text-gray-400 mb-4">
               Building tomorrow's digital solutions today. We help businesses
               transform through technology.
@@ -95,7 +95,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Web Development
+                  Education
                 </a>
               </li>
               <li>
@@ -103,7 +103,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Mobile Apps
+                  Manufacturing
                 </a>
               </li>
               <li>
@@ -111,7 +111,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Automation
                 </a>
               </li>
               <li>
@@ -119,7 +119,7 @@ const Footer = () => {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Consulting
+                  Mining
                 </a>
               </li>
             </ul>

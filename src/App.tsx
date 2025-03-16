@@ -3,9 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "../src/Pages/about";
 import Career from "../src/Pages/career";
+import Industry from '../src/Pages/industry'
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-import Portfolio from "./components/Portfolio";
+// import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -38,9 +39,10 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/industry" element={<Industry/>} />
       </Routes>
       <Services />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Testimonials />
       <Contact />
       <Footer />
