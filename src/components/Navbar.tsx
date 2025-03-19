@@ -19,8 +19,8 @@ const Navbar: React.FC = () => {
       title: "We Offer",
       to: "#services",
       dropdown: [
-        { title: "Solution", to: "#solution" },
-        { title: "Service", to: "#service" },
+        { title: "Solutions", to: "/solutions" }, // Updated "SolutionPage" to "Solutions" for consistency
+        { title: "Services", to: "/services" },
         { title: "Products", to: "#products" },
       ],
     },

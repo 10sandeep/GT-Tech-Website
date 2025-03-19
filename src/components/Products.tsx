@@ -25,7 +25,7 @@ const features = [
   },
 ];
 
-export default function Services() {
+export default function Products() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-indigo-950 text-white px-6 py-12 flex flex-col items-center overflow-hidden">
       {/* Background Video with Enhanced Overlay */}
@@ -49,13 +49,13 @@ export default function Services() {
 
       {/* Header Section */}
       <motion.h1
-        className="relative z-20 text-5xl md:text-6xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-pulse mt-12"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        Our Products
-      </motion.h1>
+           initial={{ opacity: 0, y: -30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.7 }}
+           className="text-5xl font-extrabold text-white mb-6"
+         >
+           Our <span className="text-indigo-400">Products</span>
+         </motion.h1>
 
       {/* Features Section */}
       <div className="relative z-20 mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl">

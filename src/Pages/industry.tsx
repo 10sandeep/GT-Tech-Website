@@ -4,7 +4,7 @@ import Railway from "../assets/Railway.jpg";
 import Ship from "../assets/Construction & Territories.jpg";
 import Aerospace from "../assets/Aerospace.jpg";
 import Construction from "../assets/Construction & Territories.jpg";
-import Industry from "../assets/Industry Equipement.jpeg";
+import IndustryIMG from "../assets/Industry Equipement.jpeg";
 import Digital from "../assets/Digital Manufacturing.jpg";
 import Smart from "../assets/smart city.jpg";
 import Mining from "../assets/mining.jpg";
@@ -50,7 +50,7 @@ const projects = [
   {
     title: "Industry Equipment",
     category: "Industrial Automation",
-    image: Industry,
+    image: IndustryIMG,
     description:
       "Process flow simulation and special-purpose machine design for flexible manufacturing.",
   },
@@ -106,7 +106,7 @@ const categories = [
   "Education & Training",
 ];
 
-const Portfolio: React.FC = () => {
+const Industry: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -122,9 +122,9 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 animate-pulse mb-6">
-            Industry
-          </h2>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mt-8 mb-8 text-indigo-400  bg-clip-text tracking-wide">
+ Industry
+</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Discover our futuristic projects transforming industries with innovation and precision.
           </p>
@@ -184,4 +184,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio;
+export default Industry;

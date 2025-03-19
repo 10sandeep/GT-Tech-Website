@@ -37,9 +37,11 @@ const AboutUs: React.FC = () => {
       <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-purple-500 blur-3xl opacity-20 animate-pulse"></div>
       
       <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-glow mb-12">
-          About Us
-        </h2>
+      <h2 className="text-4xl mt-8 font-extrabold text-white mb-12">
+  About <span className="text-indigo-400">US</span> 
+</h2>
+
+
         <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
           GramTarang Technologies is a cutting-edge tech firm incubated within Centurion University, collaborating with subsidiaries to pioneer innovation in a digital future.
         </p>
