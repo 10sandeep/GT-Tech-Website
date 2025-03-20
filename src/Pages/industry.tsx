@@ -10,6 +10,8 @@ import Smart from "../assets/smart city.jpg";
 import Mining from "../assets/mining.jpg";
 import Information from "../assets/information Technology.jpg";
 import Skill from "../assets/skill.png";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const projects = [
   {
@@ -117,9 +119,9 @@ const Industry: React.FC = () => {
   return (
     <section
       id="portfolio"
-      className="py-20 bg-gradient-to-br from-gray-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950 transition-colors duration-300 overflow-hidden"
+      className="pt-20 bg-gradient-to-br from-gray-50 to-indigo-100 dark:from-gray-900 dark:to-indigo-950 transition-colors duration-300 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative mb-16">
         {/* Heading */}
         <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-center mt-8 mb-8 text-indigo-400  bg-clip-text tracking-wide">
@@ -180,6 +182,7 @@ const Industry: React.FC = () => {
         
       
       </div>
+      <Footer/>
     </section>
   );
 };

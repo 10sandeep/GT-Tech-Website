@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
       title: "We Offer",
       to: "#services",
       dropdown: [
-        { title: "Solutions", to: "/solutions" }, // Updated "SolutionPage" to "Solutions" for consistency
+        { title: "Solutions", to: "/solutions" },
         { title: "Services", to: "/services" },
         { title: "Products", to: "#products" },
       ],
@@ -90,30 +90,66 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-0 bg-black/80 backdrop-blur-lg transition-all duration-500 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-        <div className="px-6 pt-24 pb-6 space-y-6">
-          {navItems.map((item) => (
-            <div key={item.title}>
-              <NavLink
-                to={item.to}
-                className="block px-4 py-3 text-xl font-semibold text-gray-200 hover:text-cyan-400 transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.title}
-              </NavLink>
-              {item.dropdown?.map((dropItem) => (
+      {/* Mobile Sidebar Overlay */}
+      <div
+        className={`fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-sm transition-opacity duration-500 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setIsOpen(false);
+        }}
+      >
+        {/* Mobile Sidebar with Glassmorphism */}
+        <div
+          className={`w-64 h-full bg-black/80 backdrop-blur-xl shadow-2xl border-l border-cyan-500/40 p-6 transform transition-transform duration-500 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.75)",
+            boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+          }}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-5 right-5 text-gray-300 hover:text-cyan-400 transition duration-300"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          {/* Navigation Links with Black Glassmorphism */}
+          <nav className="mt-10 space-y-4 bg-black backdrop-filter: blur(10px)">
+            {navItems.map((item) => (
+              <div key={item.title} className="group">
                 <NavLink
-                  key={dropItem.title}
-                  to={dropItem.to}
-                  className="block px-6 py-2 text-lg text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors duration-200"
+                  to={item.to}
+                  className="block px-4 py-3 text-lg font-semibold text-gray-100 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
-                  {dropItem.title}
+                  {item.title}
                 </NavLink>
-              ))}
-            </div>
-          ))}
+                {item.dropdown?.map((dropItem) => (
+                  <NavLink
+                    key={dropItem.title}
+                    to={dropItem.to}
+                    className="block px-6 py-2 text-gray-300 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                    style={{
+                      background: "rgba(0, 0, 0, 0.7)",
+                      backdropFilter: "blur(50px)",
+                      borderRadius: "8px",
+                      margin: "4px 0",
+                      padding: "8px 12px",
+                      display: "block",
+                      transition: "all 0.3s ease-in-out",
+                    }}
+                  >
+                    {dropItem.title}
+                  </NavLink>
+                ))}
+              </div>
+            ))}
+          </nav>
         </div>
       </div>
     </nav>

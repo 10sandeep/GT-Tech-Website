@@ -6,6 +6,7 @@ import Manager from '../assets/ashish.jpg';
 import BIOVIA from '../assets/Sidharth.jpeg';
 import HR from '../assets/alam.jpeg';
 import Project from '../assets/Madhusudhan.jpg';
+import Footer from "../components/Footer";
 
 interface Person {
   name: string;
@@ -29,7 +30,7 @@ const team: Person[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="min-h-screen bg-black py-16 text-white overflow-hidden relative">
+    <section className="min-h-screen bg-black pt-16 text-white overflow-hidden relative">
       <div className="absolute inset-0 bg-grid-small opacity-10"></div>
       
       {/* Animated Glow Effects */}
@@ -69,7 +70,7 @@ const AboutUs: React.FC = () => {
         <h3 className="mt-20 text-4xl font-bold text-white">
           Our Dynamic Team
         </h3>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
           {team.map((member, index) => (
             <div key={index} className="group transform hover:scale-105 transition-all duration-500">
               <div className="relative w-full h-72 rounded-xl overflow-hidden shadow-lg border border-gray-700 backdrop-blur-lg">
@@ -84,6 +85,7 @@ const AboutUs: React.FC = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

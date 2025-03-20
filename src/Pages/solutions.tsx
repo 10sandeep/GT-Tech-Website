@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRight, Globe, Plane, FlaskConical, Building, Wrench, BarChart, Brain } from "lucide-react";
+import Footer from "../components/Footer";
 
 // Define types for the solution items
 interface SolutionItem {
@@ -33,7 +34,7 @@ const SolutionsPage: React.FC = () => {
         {
           title: "Drone Based End-to-End Solution & Centre of Excellence",
           description: "Innovative drone-based solutions for agriculture and mining.",
-          icon: <Plane className="w-6 h-6 text-green-400" />, // Replaced Drone with Helicopter
+          icon: <Plane className="w-6 h-6 text-green-400" />,
         },
       ],
     },
@@ -106,24 +107,27 @@ const SolutionsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-gray-900 to-purple-900 text-white relative overflow-hidden flex flex-col">
       {/* Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900 via-gray-900 to-purple-900 opacity-80 animate-pulse"></div>
+      <div className="absolute inset-0 bg-opacity-80 animate-pulse"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22rgba(6, 182, 212, 0.1)%22 stroke-width=%222%22/%3E%3C/svg%22)] opacity-50"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mt-8 mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text tracking-wide">
-  VAR & Solution Implementation
-</h1>
-<p className="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto leading-relaxed">
-  Unlocking the future with cutting-edge technology, innovation, and transformative solutions.
-</p>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mt-8 mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text tracking-wide">
+          VAR & Solution Implementation
+        </h1>
+        <p className="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto leading-relaxed">
+          Unlocking the future with cutting-edge technology, innovation, and transformative solutions.
+        </p>
 
         {/* Sections */}
         <div className="space-y-24">
           {sections.map((section, index) => (
-            <div key={index} className="bg-gray-800 bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-md border border-gray-700/50">
+            <div
+              key={index}
+              className="bg-gray-800 bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-md border border-gray-700/50"
+            >
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-cyan-300">
                 {section.title}
               </h2>
@@ -140,17 +144,6 @@ const SolutionsPage: React.FC = () => {
                       </h3>
                     </div>
                     <p className="text-sm text-gray-400 mb-4">{item.description}</p>
-                    {item.subItems && (
-                      <div className="space-y-2">
-                        {item.subItems.map((subItem, subIndex) => (
-                          <div key={subIndex} className="flex items-center text-xs text-gray-300">
-                            <ChevronRight className="w-4 h-4 text-cyan-400 mr-1" />
-                            <span>{subItem.title}</span>
-                            <span className="ml-1 text-gray-500">{subItem.description}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
@@ -158,6 +151,8 @@ const SolutionsPage: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

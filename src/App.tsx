@@ -35,11 +35,7 @@ const App: React.FC = () => {
         <Route path="/solutions" element={<SolutionsPage/>} />
         <Route path="/services" element={<Services/>} />
       </Routes>
-      <Products />
-      {/* <Portfolio /> */}
-      <Testimonials />
-      <Contact />
-      <Footer />
+   
     </div>
   );
 };
